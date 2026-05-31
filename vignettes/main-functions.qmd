@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(monthr)
 library(dplyr)
 library(tidyr)
 library(gt)
@@ -161,4 +160,3 @@ country <- function(selected_country){
 }
 
 ```
-
