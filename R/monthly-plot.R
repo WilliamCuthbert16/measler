@@ -21,12 +21,14 @@
 monthly_plot <- function(data, selected_region, selected_months = NULL) {
   filter_region(data, selected_region, selected_months) |>
     mutate(month = factor(month.abb[month], levels = month.abb),
-           region = recode(region,
-                           "AFR" = "Africa", "AMR" = "Americas",
-                           "EMR" = "Eastern Mediterranean",
-                           "EUR" = "Europe",
-                           "SEAR" = "South-East Asia",
-                           "WPR" = "Western Pacific")) |>
+           region = dplyr::recode(region,
+                                  "AFR" = "Africa",
+                                  "AMR" = "Americas",
+                                  "EMR" = "Eastern Mediterranean",
+                                  "EUR" = "Europe",
+                                  "SEAR" = "South-East Asia",
+                                  "WPR" = "Western Pacific"
+           )) |>
     ggplot(aes(x = month, y = avg_measles,
                group = region,color = region)) +
     geom_line() +
