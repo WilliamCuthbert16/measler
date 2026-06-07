@@ -17,3 +17,11 @@ Suggests:
 VignetteBuilder: knitr
 URL: https://github.com/WilliamCuthbert16/measler
 BugReports: https://github.com/WilliamCuthbert16/measler/issues
+Imports: 
+    arrow,
+    gt,
+    janitor,
+    rnaturalearth,
+    rnaturalearthdata,
+    sf,
+    stats
